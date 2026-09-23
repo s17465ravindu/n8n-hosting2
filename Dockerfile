@@ -4,8 +4,8 @@
 FROM node:22-bookworm-slim
 
 RUN apt-get update && \
-    apt-get install -y ca-certificates curl python3 make g++ && \
-    update-ca-certificates
+ apt-get install -y ca-certificates curl python3 make g++ && \
+ update-ca-certificates
 
 # Install n8n
 RUN npm install -g n8n@latest
