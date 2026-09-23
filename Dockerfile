@@ -1,7 +1,7 @@
 # ===========================================
 # n8n on Hugging Face Spaces + Supabase
 # ===========================================
-FROM node:22-bookworm-slim
+FROM node:lts-bookworm-slim
 
 RUN apt-get update && \
  apt-get install -y ca-certificates curl python3 make g++ && \
