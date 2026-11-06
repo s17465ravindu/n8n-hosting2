@@ -24,12 +24,11 @@ ENV NODE_ENV=production
 # ✅ FIXED: Combined both flags together
 ENV NODE_OPTIONS="--dns-result-order=ipv4first --openssl-legacy-provider"
 
-# ✅ ADDED: Disable TLS rejection globally
-ENV NODE_TLS_REJECT_UNAUTHORIZED=0
 
 # Proxy
 ENV N8N_PROXY_HOPS=1
-ENV N8N_SECURE_COOKIE=false
+ENV N8N_LISTEN_ADDRESS=0.0.0.0
+ENV N8N_SECURE_COOKIE=true
 
 # Supabase
 ENV DB_TYPE=postgresdb
