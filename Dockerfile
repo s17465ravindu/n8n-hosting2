@@ -1,14 +1,15 @@
 # ===========================================
 # n8n on Hugging Face Spaces + Supabase
 # ===========================================
-FROM node:22-bookworm-slim
+FROM node:24-bookworm-slim
 
 RUN apt-get update && \
  apt-get install -y ca-certificates curl python3 make g++ && \
  update-ca-certificates
 
 # Install n8n
-RUN npm install -g n8n@latest
+#RUN npm install -g n8n@latest
+RUN npm install -g n8n@2.46.6
 
 # Create data directory
 RUN mkdir -p /home/node/.n8n && \
